@@ -1,0 +1,31 @@
+{
+  "name" : "First Job",
+  "description" : "",
+  "role" : "arn:aws:iam::730335514089:role/service-role/AWSGlueServiceRole",
+  "executionProperty" : {
+    "maxConcurrentRuns" : 1
+  },
+  "command" : {
+    "name" : "pythonshell",
+    "scriptLocation" : "s3://aws-glue-assets-730335514089-eu-north-1/scripts/First Job.py",
+    "pythonVersion" : "3.9"
+  },
+  "defaultArguments" : {
+    "--enable-job-insights" : "false",
+    "--job-language" : "python",
+    "--TempDir" : "s3://aws-glue-assets-730335514089-eu-north-1/temporary/",
+    "--enable-glue-datacatalog" : "true",
+    "library-set" : "analytics"
+  },
+  "maxRetries" : 0,
+  "allocatedCapacity" : 0,
+  "timeout" : 2880,
+  "maxCapacity" : 0.0625,
+  "glueVersion" : "3.0",
+  "sourceControlDetails" : {
+    "provider" : "GITHUB",
+    "repository" : "pyspark",
+    "branch" : "main",
+    "folder" : "First Job"
+  }
+}
